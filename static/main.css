@@ -24,7 +24,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
+  justify-content: center; /*This will vertically center its children*/
+  height: 100vh; /* Full viewport height */
+  padding: 0; /* Resetting padding to 0 */
 }
 .icon {
   width: 34px;
@@ -39,13 +41,16 @@ h3 {
 form {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 60%; /* Adjusted from fixed width to auto */
+  height: auto; /* Adjusted from fixed height to auto */
 }
 input[type="text"] {
-  padding: 12px 16px;
-  border: 1px solid #10a37f;
-  border-radius: 4px;
-  margin-bottom: 24px;
+  font-size: 20px; /* Adjusted from 16px to 20px */
+  line-height: 28px; /* Adjusted the line-height proportionally */
+  color: #353740;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+  word-wrap: break-word; /* Add this line */
+  height: 50px; /* Adjust height as per your need */
 }
 ::placeholder {
   color: #8e8ea0;
@@ -59,6 +64,8 @@ input[type="submit"] {
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
+  width: auto;
+  word-wrap: break-word; /* Add this line */
 }
 .result {
   font-weight: bold;
